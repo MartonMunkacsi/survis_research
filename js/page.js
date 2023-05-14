@@ -115,21 +115,7 @@ const page = (function () {
             }));
             if (paper) {
                 var paperDiv = $('<div id="paper">' + paper.html + '</div>');
-                if (paper.id) {
-                    var showPaperButton = $('<div>', {
-                        class: 'button',
-                        text: 'select'
-                    });
-                    showPaperButton.click(function (event) {
-                        selectors.toggleSelector('search', paper.id, event);
-                        if (showPaperButton.text() == 'select') {
-                            showPaperButton.text('deselect');
-                        } else {
-                            showPaperButton.text('select');
-                        }
-                    });
-                    paperDiv.append(showPaperButton)
-                }
+                
                 titleDiv.append(paperDiv);
             }
         } else {
